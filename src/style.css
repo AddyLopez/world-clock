@@ -2,5 +2,30 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   margin: 0;
-  text-align: center;
+}
+
+div.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+header {
+  display: block;
+}
+
+footer {
+  padding: 10px;
+}
+
+p.city {
+  font-weight: 700;
+  font-size: 20px;
+}
+p.date,
+p.time {
+  font-style: italic;
+  margin: 4px 0;
 }

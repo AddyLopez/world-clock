@@ -8,16 +8,47 @@
     <title>World Clock</title>
   </head>
   <body>
-    <h1>World Clock</h1>
-    <footer>
-      <a
-        href="https://github.com/AddyLopez/world-clock"
-        target="_blank"
-        title="To GitHub repository"
-        >Open-source code</a
-      >
-      by Addy López
-    </footer>
+    <div class="container">
+      <header>
+        <h1>World Clock</h1>
+      </header>
+      <main>
+        <section>
+          <select name="cities" id="cities">
+            <option value="">Select a city</option>
+            <option value="beijing">Beijing</option>
+            <option value="caracas">Caracas</option>
+            <option value="johannesburg">Johannesburg</option>
+          </select>
+        </section>
+        <section class="clocks">
+          <section>
+            <p class="city">Beijing</p>
+            <p class="date">October 9, 2025</p>
+            <p class="time">1:56:00 pm</p>
+          </section>
+          <section>
+            <p class="city">Caracas</p>
+            <p class="date">October 9, 2025</p>
+            <p class="time">1:56:00 pm</p>
+          </section>
+          <section>
+            <p class="city">Johannesburg</p>
+            <p class="date">October 9, 2025</p>
+            <p class="time">1:56:00 pm</p>
+          </section>
+        </section>
+      </main>
+      <footer>
+        <a
+          href="https://github.com/AddyLopez/world-clock"
+          target="_blank"
+          title="To GitHub repository"
+          >Open-source code</a
+        >
+        by Addy López
+      </footer>
+    </div>
     <script src="./src/index.js"></script>
   </body>
 </html>
