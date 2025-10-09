@@ -1,1 +1,1 @@
-alert("World Clock");
+// alert("World Clock");
