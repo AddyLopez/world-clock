@@ -24,17 +24,10 @@ const getCities = () => {
 
 const updateDate = (timezones) => {
   const dateElements = document.querySelectorAll(".date");
-  // Establish the date right away, then trigger updates after 24 hours
   dateElements.forEach((dateElement, index) => {
     const date = moment().tz(`${timezones[index]}`).format("MMMM D, YYYY");
     dateElement.innerHTML = date;
   });
-  setInterval(() => {
-    dateElements.forEach((dateElement, index) => {
-      const date = moment().tz(`${timezones[index]}`).format("MMMM D, YYYY");
-      dateElement.innerHTML = date;
-    });
-  }, 86400000); // Update the date every 24 hours, which is 86400 * 1000 milliseconds
 };
 
 const updateTime = (timezones) => {
@@ -50,7 +43,8 @@ const updateTime = (timezones) => {
 };
 
 const updateDateTime = (timezones) => {
-  updateDate(timezones);
+  updateDate(timezones); // Establish the date right away, then trigger updates after 24 hours
+  setInterval(updateDate, 86400000); // Update the date every 24 hours, which is 86400 * 1000 milliseconds
   updateTime(timezones);
 };
 
