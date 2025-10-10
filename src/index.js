@@ -13,12 +13,9 @@ const getCities = () => {
   cityElements.forEach((cityElement) => {
     console.log(cityElement.childNodes[0].data);
     const cityName = cityElement.childNodes[0].data;
-    const capitalizedCity =
-      cityName.charAt(0).toUpperCase() + cityName.slice(1); // Safeguard measure: ensure city is capitalized to facilitate search through timezones list
-    // console.log(capitalizedCity);
-    cities.push(capitalizedCity);
+    cities.push(cityName);
   });
-  console.log(cities);
+  //console.log(cities);
   return cities;
 };
 
@@ -50,7 +47,7 @@ const updateDateTime = (timezones) => {
 
 const findTimezone = (cities) => {
   const allTimezones = moment.tz.names(); // get list of timezones from Moment
-  console.log(allTimezones);
+  //console.log(allTimezones);
 
   let formattedTimezones = [];
   cities.forEach((city) => {
@@ -58,7 +55,7 @@ const findTimezone = (cities) => {
     const timezone = allTimezones.filter((timezone) => {
       return timezone.includes(city);
     });
-    console.log(timezone);
+    //console.log(timezone);
     formattedTimezones.push(timezone);
   });
 
@@ -71,6 +68,35 @@ const updateDisplay = () => {
   findTimezone(cities);
 };
 
-updateDisplay();
+const addCity = (event) => {
+  const selected = event.target.value;
+  const capitalizedSelected =
+    selected.charAt(0).toUpperCase() + selected.slice(1); // Safeguard measure: ensure selected city is capitalized to facilitate search through timezones list
+  // console.log(capitalizedCity);
+  const clocks = document.getElementById("clocks");
+  //console.log(clocks);
+  const childNode = `
+    <section class="clock-instance">
+      <div>
+        <p class="city">${capitalizedSelected}</p>
+        <p class="date"></p>
+      </div>
+      <p class="time"></p>
+    </section>`;
+  if (!clockChildNodes.includes(childNode)) {
+    clockChildNodes.push(childNode);
+  } else {
+    return;
+  }
+  // console.log(clockChildNodes);
+  clocks.innerHTML = clockChildNodes.join(""); // debugs by removing the comma displayed between multiple clock-instances
+  updateDisplay();
+};
+
+let clockChildNodes = [];
+const citiesSelect = document.getElementById("cities");
+citiesSelect.addEventListener("change", addCity);
+//updateDisplay();
 
 // why use a select instead of a search?
+// should switch to document fragments instead, probably
