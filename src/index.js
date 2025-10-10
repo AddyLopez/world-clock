@@ -4,6 +4,7 @@ Overview of my solution:
 2. Feed the array of cities into a function that maps them to their timezones in the Moment JS dataset.
 3. Feed the array of formatted timezones into a function to update and format the time.
 4. The updateTime function uses setInterval to update the time per timezone associated with each city every second.
+NOTE: currently, the select form is not operational. This solution may be better suited for a search bar, which is less limited than a select menu.
 */
 
 const updateTime = (timezones) => {
