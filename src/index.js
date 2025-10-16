@@ -41,7 +41,7 @@ const updateTime = (timezones) => {
 
 const updateDateTime = (timezones) => {
   updateDate(timezones); // Establish the date right away, then trigger updates after 24 hours
-  setInterval(updateDate, 86400000); // Update the date every 24 hours, which is 86400 * 1000 milliseconds
+  setInterval(updateDate(timezones), 86400000); // Update the date every 24 hours, which is 86400 * 1000 milliseconds
   updateTime(timezones);
 };
 
@@ -82,7 +82,25 @@ const addCity = (event) => {
     console.log(capitalizedSelected);
   }
   // console.log(capitalizedSelected);
-  const clocks = document.getElementById("clocks");
+  /*const clocks = document.getElementById("clocks");
+  const fragment = document.createDocumentFragment();
+  const section = document.createElement("section");
+  const div = document.createElement("div");
+  const pCity = document.createElement("p");
+  const pDate = document.createElement("p");
+  const pTime = document.createElement("p");
+  section.className = `clock-instance ${selected}`;
+  pCity.className = "city";
+  pCity.textContent = capitalizedSelected;
+  pDate.className = "date";
+  pTime.className = "time";
+  div.appendChild(pCity);
+  div.appendChild(pDate);
+  section.appendChild(div);
+  section.appendChild(pTime);
+  fragment.appendChild(section);
+  clocks.appendChild(fragment);*/
+
   //console.log(clocks);
   const childNode = `
     <section class="clock-instance">
@@ -98,7 +116,7 @@ const addCity = (event) => {
     return;
   }
   // console.log(clockChildNodes);
-  clocks.innerHTML = clockChildNodes.join(""); // debugs by removing the comma displayed between multiple clock-instances
+  clocks.innerHTML = clockChildNodes.join(""); // debugs by removing the comma displayed between multiple clock-instances */
   updateDisplay();
 };
 
@@ -106,6 +124,3 @@ let clockChildNodes = [];
 const citiesSelect = document.getElementById("cities");
 citiesSelect.addEventListener("change", addCity);
 //updateDisplay();
-
-// why use a select instead of a search?
-// should switch to document fragments instead, probably
