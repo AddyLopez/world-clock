@@ -22,7 +22,7 @@ const getCities = () => {
 const updateDate = (timezones) => {
   const dateElements = document.querySelectorAll(".date");
   dateElements.forEach((dateElement, index) => {
-    const date = moment().tz(`${timezones[index]}`).format("MMMM D, YYYY");
+    const date = moment().tz(`${timezones[index]}`).format("MMM D, YYYY");
     dateElement.innerHTML = date;
   });
 };
