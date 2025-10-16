@@ -5,13 +5,13 @@ Overview of my solution:
 3. Feed the array of formatted timezones into a function to update and format the date and time.
 4. UpdateDateTime bundles logic to updateDate and updateTime.
 4. The updateTime function uses setInterval to update the time per timezone associated with each city every second.
-NOTE: currently, the select form is not operational. This solution may be better suited for a search bar, which is less limited than a select menu.
+NOTE: This solution is better suited for a search bar, which is less limited than a select menu.
 */
 const getCities = () => {
   const cityElements = document.querySelectorAll(".city");
   let cities = [];
   cityElements.forEach((cityElement) => {
-    console.log(cityElement.childNodes[0].data);
+    //console.log(cityElement.childNodes[0].data);
     const cityName = cityElement.childNodes[0].data;
     cities.push(cityName);
   });
@@ -51,10 +51,15 @@ const findTimezone = (cities) => {
 
   let formattedTimezones = [];
   cities.forEach((city) => {
+    let timezone;
+    if (city === "Current Location") {
+      timezone = moment.tz.guess();
+    } else {
+      timezone = allTimezones.filter((timezone) => {
+        return timezone.includes(city);
+      });
+    }
     // Use cities array to generate array of corresponding timezones named properly
-    const timezone = allTimezones.filter((timezone) => {
-      return timezone.includes(city);
-    });
     //console.log(timezone);
     formattedTimezones.push(timezone);
   });
@@ -70,9 +75,13 @@ const updateDisplay = () => {
 
 const addCity = (event) => {
   const selected = event.target.value;
-  const capitalizedSelected =
+  let capitalizedSelected =
     selected.charAt(0).toUpperCase() + selected.slice(1); // Safeguard measure: ensure selected city is capitalized to facilitate search through timezones list
-  // console.log(capitalizedCity);
+  if (selected === "current-location") {
+    capitalizedSelected = "Current Location";
+    console.log(capitalizedSelected);
+  }
+  // console.log(capitalizedSelected);
   const clocks = document.getElementById("clocks");
   //console.log(clocks);
   const childNode = `
