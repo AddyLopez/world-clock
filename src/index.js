@@ -5,8 +5,8 @@ Overview of my solution:
 3. Feed the array of formatted timezones into a function to update and format the date and time.
 4. UpdateDateTime bundles logic to updateDate and updateTime.
 4. The updateTime function uses setInterval to update the time per timezone associated with each city every second.
-NOTE: This solution is better suited for a search bar, which is less limited than a select menu.
 */
+
 const getCities = () => {
   const cityElements = document.querySelectorAll(".city");
   let cities = [];
@@ -82,24 +82,6 @@ const addCity = (event) => {
     console.log(capitalizedSelected);
   }
   // console.log(capitalizedSelected);
-  /*const clocks = document.getElementById("clocks");
-  const fragment = document.createDocumentFragment();
-  const section = document.createElement("section");
-  const div = document.createElement("div");
-  const pCity = document.createElement("p");
-  const pDate = document.createElement("p");
-  const pTime = document.createElement("p");
-  section.className = `clock-instance ${selected}`;
-  pCity.className = "city";
-  pCity.textContent = capitalizedSelected;
-  pDate.className = "date";
-  pTime.className = "time";
-  div.appendChild(pCity);
-  div.appendChild(pDate);
-  section.appendChild(div);
-  section.appendChild(pTime);
-  fragment.appendChild(section);
-  clocks.appendChild(fragment);*/
 
   //console.log(clocks);
   const childNode = `
@@ -123,4 +105,3 @@ const addCity = (event) => {
 let clockChildNodes = [];
 const citiesSelect = document.getElementById("cities");
 citiesSelect.addEventListener("change", addCity);
-//updateDisplay();
