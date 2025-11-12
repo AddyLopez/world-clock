@@ -1,13 +1,13 @@
 body {
-  background-color: black;
+  align-items: center;
+  background-color: hsl(0, 0%, 0%);
   color: hsl(120, 61%, 50%);
-  font-family: "Orbitron", sans-serif;
-  margin: 0;
   display: flex;
+  font-family: "Orbitron", sans-serif;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   letter-spacing: 2.5px;
+  margin: 0;
 }
 
 div.container {
@@ -21,10 +21,10 @@ header {
 }
 
 footer {
-  margin: 20px 0;
-  text-align: center;
   color: hsl(0, 0%, 100%);
   font-size: 14px;
+  margin: 20px 0;
+  text-align: center;
 }
 
 footer a {
@@ -53,11 +53,11 @@ select {
 }
 
 section.clock-instance {
+  align-items: center;
   border-bottom: 3px dashed hsl(120, 61%, 50%);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-basis: 100%;
+  justify-content: space-between;
   padding: 0 10px;
 }
 
@@ -65,13 +65,13 @@ section.clock-instance:last-child {
   border-bottom: none;
 }
 p.city {
-  font-weight: 700;
   font-size: 22px;
+  font-weight: 700;
 }
 
 p.date {
-  font-style: italic;
   font-size: 16px;
+  font-style: italic;
 }
 
 p.time {
@@ -81,6 +81,6 @@ p.time {
 
 p.time span {
   font-size: 18px;
-  vertical-align: middle;
   font-weight: 900;
+  vertical-align: middle;
 }
