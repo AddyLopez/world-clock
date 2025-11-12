@@ -26,7 +26,7 @@ To use the application, select a city from the drop-down select menu. A digital 
 
 ## Project Previews
 
-![World Clock preview](./preview/world-clock-preview.png)
+![World Clock preview](./preview/world-clock-final-preview.png)
 
 ## Attribution
 
