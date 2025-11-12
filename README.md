@@ -6,7 +6,7 @@
 
 This digital world clock application was built in HTML, CSS, and JavaScript. Accurate date and time formatting across numerous timezones was streamlined by integrating the Moment.js library (attribution below).
 
-To use the application, select a city from the drop-down select menu. A digital clock updated every second will display below. Repeat these instructions to add new clocks to the display! Refresh the app to start over with a clean slate.
+To use the application, select a city from the drop-down select menu. A digital clock updated every second will display below. Repeat these instructions to add new clocks to the display! Refresh the page to start over with a clean slate.
 
 ## Coding Features
 
