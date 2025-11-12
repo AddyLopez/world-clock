@@ -11,8 +11,9 @@ body {
 }
 
 div.container {
-  min-width: 85%;
+  width: 80%;
   padding: 10px;
+  max-width: 95%;
 }
 
 header {
@@ -65,13 +66,19 @@ section.clock-instance:last-child {
   border-bottom: none;
 }
 p.city {
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 700;
 }
 
 p.date {
   font-size: 16px;
   font-style: italic;
+}
+
+p.instructions {
+  margin: 20px auto;
+  max-width: 95%;
+  width: 80%;
 }
 
 p.time {
