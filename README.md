@@ -24,7 +24,7 @@ To use the application, select a city from the drop-down select menu. A digital 
 
 - **_Accessibility rating_** by Lighthouse audit: 90/100 for desktops, 90/100 for mobile devices.
 
-## Project Previews
+## Project Preview
 
 ![World Clock preview](./preview/world-clock-final-preview.png)
 
