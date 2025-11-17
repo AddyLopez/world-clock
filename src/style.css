@@ -58,8 +58,8 @@ section.clock-instance {
   border-bottom: 3px dashed hsl(120, 61%, 50%);
   display: flex;
   flex-basis: 100%;
-  justify-content: space-between;
   padding: 0 10px;
+  justify-content: space-between;
 }
 
 section.clock-instance:last-child {
@@ -90,4 +90,35 @@ p.time span {
   font-size: 18px;
   font-weight: 900;
   vertical-align: middle;
+}
+
+@media only screen and (max-width: 576px) {
+  div.container {
+    width: 90%;
+  }
+  p.instructions {
+    margin: 20px auto;
+    max-width: 95%;
+    width: 80%;
+  }
+  select {
+    margin: 10px auto;
+    width: 85%;
+  }
+
+  section.clock-instance {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    text-align: center;
+  }
+  p.time {
+    margin: 10px 0 20px 0;
+  }
+  p.date {
+    margin: 0 0 10px 0;
+  }
+  p.city {
+    margin: 20px 0 10px 0;
+  }
 }
