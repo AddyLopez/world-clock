@@ -12,11 +12,11 @@ To use the application, select a city from the drop-down select menu. A digital 
 
 - **_JavaScript:_** streamlined date and time formatting across numerous time zones using Moment.js, dynamic injection of world clock instances based on select menu, time updated every second using the setInterval() function, explanatory annotations provided, logging statements to test the app's behavior at every stage of operation
 
-- **_CSS:_** responsive web design for screens of all sizes, custom font, flexbox techniques employed for responsive spacing and styling, retro digital design
+- **_CSS:_** responsive web design for screens of all sizes, custom font, flexbox and grid techniques employed for responsive spacing and styling, retro digital design
 
 - **_HTML:_** accessible semantic tags, form handling of select menu with numerous options, logical structure, text injection into HTML via JavaScript
 
-- **_UI/UX Considerations_**: accessible and responsive web design, redundant clocks from the same selected city averted from appearing in the results, neat instructions for usage provided to guide user's behavior based on clear expectations
+- **_UI/UX Considerations_**: accessible and responsive web design for small, medium, and large screens; redundant clocks from the same selected city averted from appearing in the results; neat instructions for usage provided to guide user's behavior based on clear expectations
 
 - Coded in VS Code with tools for a **_professional development workflow, version control, and continuous deployment_**, such as Live Server, Git, GitHub, and hosting on Netlify
 
